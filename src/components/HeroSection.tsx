@@ -300,7 +300,8 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
-import heroImage from "@/assets/hero-bg.jpg";
+// import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/hero-driver.jpg";
 import { createBooking } from "@/services/bookingService";
 
 const GOOGLE_MAPS_LIBRARIES: ("places")[] = ["places"];
@@ -738,7 +739,7 @@ const HeroSection = () => {
                         <LocationInput
                           value={form.drop_location}
                           onChange={(val) => setForm((prev) => ({ ...prev, drop_location: val }))}
-                          placeholder="Drop location (optional)"
+                          placeholder="Drop location "
                           isLoaded={isLoaded}
                         />
                       </div>

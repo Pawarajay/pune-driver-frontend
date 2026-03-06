@@ -87,8 +87,6 @@ const vehicles = [
   {
     type: "Hatchback",
     examples: "WagonR · i10 · Swift",
-    price: "₹199/hr",
-    emoji: "🚗",
     desc: "Perfect for city commutes and short trips around Pune & Mumbai",
     tag: "Most Popular",
     tagColor: "bg-orange-500",
@@ -97,8 +95,6 @@ const vehicles = [
   {
     type: "Sedan",
     examples: "Honda City · Ciaz · Verna",
-    price: "₹249/hr",
-    emoji: "🚙",
     desc: "Comfortable rides for business meetings & family outings",
     tag: "Business Choice",
     tagColor: "bg-blue-500",
@@ -107,8 +103,6 @@ const vehicles = [
   {
     type: "SUV / MUV",
     examples: "Innova · XUV700 · Fortuner",
-    price: "₹349/hr",
-    emoji: "🚐",
     desc: "Spacious vehicles for groups, outstation trips & airport runs",
     tag: "Premium",
     tagColor: "bg-purple-500",
@@ -128,15 +122,13 @@ const Vehicles = () => (
     {/* ── Background ── */}
     <div className="absolute inset-0">
       <img src={sectionBgDark} alt="" className="w-full h-full object-cover" />
-      {/* Same gradient treatment as hero for visual cohesion */}
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,100%,8%)] via-[hsl(216,100%,12%)]/90 to-[hsl(214,100%,16%)]/80" />
-      {/* Subtle noise texture */}
       <div className="absolute inset-0 opacity-[0.07]"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E\")" }}
       />
     </div>
 
-    {/* Decorative glows — same as hero */}
+    {/* Decorative glows */}
     <div className="absolute top-10 left-1/4 w-96 h-96 bg-accent/8 rounded-full blur-[120px] pointer-events-none" />
     <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-blue-500/8 rounded-full blur-[100px] pointer-events-none" />
 
@@ -183,14 +175,6 @@ const Vehicles = () => (
                 {v.tag}
               </span>
 
-              {/* Emoji icon */}
-              <div className="w-14 h-14 rounded-2xl bg-white/8 border border-white/10
-                              flex items-center justify-center text-3xl mb-5
-                              group-hover:-translate-y-1 group-hover:bg-white/12
-                              transition-all duration-300 shadow-lg">
-                {v.emoji}
-              </div>
-
               {/* Content */}
               <h3 className="font-display font-extrabold text-xl md:text-2xl text-primary-foreground mb-1">
                 {v.type}
@@ -210,12 +194,8 @@ const Vehicles = () => (
                 ))}
               </div>
 
-              {/* Price + CTA */}
-              <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
-                <div>
-                  <p className="text-[10px] text-primary-foreground/40 font-medium uppercase tracking-wide">Starting from</p>
-                  <p className="font-display font-extrabold text-xl text-accent leading-tight">{v.price}</p>
-                </div>
+              {/* CTA */}
+              <div className="flex items-center justify-end mt-auto pt-4 border-t border-white/10">
                 <a href="#booking"
                   className="flex items-center gap-1.5 bg-accent hover:bg-accent/90 text-white
                              text-xs font-bold px-4 py-2.5 rounded-xl transition-all duration-200
