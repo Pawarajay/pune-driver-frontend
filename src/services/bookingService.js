@@ -44,7 +44,8 @@
 
 // src/services/bookingService.js
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "https://pune-driver-backend-1.onrender.com/api";
 
 /**
  * Submit a new booking
